@@ -1,7 +1,6 @@
 import BackGround from "./components/BackGround";
 import ForeGround from "./components/ForeGround";
 
-
 const App = () => {
   return (
     <>
