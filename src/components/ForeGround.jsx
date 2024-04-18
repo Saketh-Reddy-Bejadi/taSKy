@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
+import "../App.css";
 
-const ForeGround = () => {
-  // eslint-disable-next-line no-unused-vars
+const ForeGround = ({ toggle, change }) => {
   const [tasks, setTask] = useState([]);
   const [taskValue, setTaskValue] = useState("");
 
@@ -22,6 +23,16 @@ const ForeGround = () => {
   return (
     <>
       <div className="w-full h-screen fixed p-20 ">
+        <div className="absolute top-10 right-5">
+          <button
+            onClick={() => {
+              toggle(), console.log(change);
+            }}
+            className="text-5xl border-2 px-3 border-slate-900 rounded-full"
+          >
+            ~
+          </button>
+        </div>
         <div className="w-full h-24">
           <form onSubmit={handleAddTask}>
             <input
@@ -32,13 +43,14 @@ const ForeGround = () => {
               id="taskInput"
               value={taskValue}
             />
-            <button type="submit">submit</button>
           </form>
         </div>
       </div>
-      <div className="flex" >
+      <div className="flex">
         {tasks.map((d, i) => (
-          <h1 className=" text-neutral-600 z-30" key={i}>{d.name}</h1>
+          <h1 className=" text-neutral-600 z-30" key={i}>
+            {d.name}
+          </h1>
         ))}
       </div>
     </>
