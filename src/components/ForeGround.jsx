@@ -35,14 +35,15 @@ const ForeGround = ({ toggle, change }) => {
         </div>
         <div className="w-full h-24">
           <form onSubmit={handleAddTask}>
-            <input
-              onChange={handleValue}
-              className="border-2 bg-transparent border-rose-500  focus:outline-none rounded-md"
-              type="text"
-              name=""
-              id="taskInput"
-              value={taskValue}
-            />
+          <label htmlFor="taskInput">Task</label>
+<input
+  onChange={handleValue}
+  className="appearance-none border rounded w-2/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+  type="text"
+  name=""
+  id="taskInput"
+  value={taskValue}
+/>
           </form>
         </div>
       </div>
