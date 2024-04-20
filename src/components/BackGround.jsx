@@ -1,10 +1,9 @@
 import "../App.css";
 
-const BackGround = (change) => {
-  console.log(change)
+const BackGround = () => {
   return (
     <div
-    className={`w-full h-screen fixed text-black flex items-center justify-center ${change===true ? 'bg-black' : 'bg-white'}`}
+    className={`w-full h-screen fixed text-black bg-black  flex items-center justify-center`}
       
       style={{ textShadow: "1px 1px 10px   #632a7a" }}
     >
@@ -15,7 +14,7 @@ const BackGround = (change) => {
         taSKy
       </h1>
       <h1
-        className="text-[13vw] absolute left-[66%] text-[#290339]"
+        className="text-[13vw] absolute left-[66%] "
         style={{ textShadow: "1px 1px 10px   #632a7a" }}
       >
         .

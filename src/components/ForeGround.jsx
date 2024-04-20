@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import "../App.css";
+import Card from "./Card";
 
-const ForeGround = ({ toggle, change }) => {
+const ForeGround = () => {
   const [tasks, setTask] = useState([]);
   const [taskValue, setTaskValue] = useState("");
 
@@ -22,8 +23,8 @@ const ForeGround = ({ toggle, change }) => {
 
   return (
     <>
-      <div className="w-full h-screen fixed p-20 ">
-        <div className="absolute top-10 right-5">
+      <div className="w-full h-screen fixed p-14 ">
+        {/* <div className="absolute top-10 right-5">
           <button
             onClick={() => {
               toggle(), console.log(change);
@@ -32,28 +33,30 @@ const ForeGround = ({ toggle, change }) => {
           >
             ~
           </button>
-        </div>
-        <div className="w-full h-24">
+        </div> */}
+        <div className="w-full h-2/6 relative">
           <form onSubmit={handleAddTask}>
-          <label htmlFor="taskInput">Task</label>
-<input
-  onChange={handleValue}
-  className="appearance-none border rounded w-2/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-  type="text"
-  name=""
-  id="taskInput"
-  value={taskValue}
-/>
+            <div>
+            {/* <label>Enter email</label> */}
+              <input
+                onChange={handleValue}
+                className=" bg-transparent text-white outline-none absolute left-1/2 -translate-x-1/2 text-xl p-5 w-1/2 h-[50px] rounded-2xl"
+                type="text"
+                id="taskInput"
+                value={taskValue}
+                autoComplete="off"
+                style={{ boxShadow: "1px 1px 10px   #632a7a" }}
+              />
+              
+            </div>
           </form>
         </div>
       </div>
-      <div className="flex">
+      <>
         {tasks.map((d, i) => (
-          <h1 className=" text-neutral-600 z-30" key={i}>
-            {d.name}
-          </h1>
+          <Card key={i} d={d} />
         ))}
-      </div>
+      </>
     </>
   );
 };

@@ -6,6 +6,6 @@
 body{
   font-family: "Poppins", sans-serif;
 }
-::selection {
+/* ::selection {
   color: #290339;
-}
+} */
