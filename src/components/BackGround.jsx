@@ -3,7 +3,7 @@ import "../App.css";
 const BackGround = () => {
   return (
     <div
-    className={`w-full h-screen fixed text-black bg-black  flex items-center justify-center`}
+    className={`w-full h-screen fixed text-black  flex items-center justify-center`}
       
       style={{ textShadow: "1px 1px 10px   #632a7a" }}
     >

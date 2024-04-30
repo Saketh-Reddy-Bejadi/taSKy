@@ -14,6 +14,7 @@ const ForeGround = () => {
   const handleAddTask = (event) => {
     event.preventDefault();
     const task = {
+      
       id: Math.floor(Math.random() * 100),
       name: taskValue,
     };
@@ -40,7 +41,8 @@ const ForeGround = () => {
             {/* <label>Enter email</label> */}
               <input
                 onChange={handleValue}
-                className=" bg-transparent text-white outline-none absolute left-1/2 -translate-x-1/2 text-xl p-5 w-1/2 h-[50px] rounded-2xl"
+                className=" bg-transparent 
+                 outline-none absolute left-1/2 -translate-x-1/2 text-xl p-5 w-1/2 h-[50px] rounded-2xl"
                 type="text"
                 id="taskInput"
                 value={taskValue}
